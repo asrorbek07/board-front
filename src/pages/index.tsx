@@ -1,10 +1,10 @@
-import {useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
+import DashboardLayout from "~/layouts/dashboard";
 
 export const IndexPage = () => {
-	const navigate = useNavigate();
-	useEffect(() => {
-		navigate('/bulletin');
-	}, []);
-	return null;
+	return (
+		<div>
+			<DashboardLayout/>
+			aSas
+		</div>
+	);
 };

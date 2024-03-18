@@ -5,6 +5,7 @@ import { browserRouter } from './pages/router';
 import dev from './dev';
 import axios, { AxiosError } from 'axios';
 import { CommandResponse, QueryResponse } from '@vizendjs/accent';
+import ThemeProvider from "./theme"
 
 
 const App = () => {
@@ -41,7 +42,11 @@ const App = () => {
     },
   );
 
-  return <RouterProvider router={router} />;
+  return (
+      <ThemeProvider>
+          <RouterProvider router={router} />
+      </ThemeProvider>
+  );
 };
 
 export default App;
